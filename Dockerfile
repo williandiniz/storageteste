@@ -9,6 +9,7 @@ RUN apt install git -y
 RUN git clone https://github.com/alexbers/mtprotoproxy.git
 COPY .apache/. /etc/apache2/
 COPY . .
+RUN mkdir /var/www/html/arquivos
 RUN chmod -R 777 /var/www/html
 RUN a2ensite teste
 RUN a2enmod rewrite
